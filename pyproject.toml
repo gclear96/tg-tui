@@ -1,0 +1,31 @@
+# This section tells Poetry how to configure your project
+[tool.poetry]
+name = "tg-tui"
+version = "0.1.0"
+description = "A Telegram TUI client"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "tg_tui", from = "src"}]
+
+# This section lists your project's main dependencies
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0.0" 
+aiotdlib = ">=0.27.6,<0.28.0"
+python-dotenv = ">=1.1.1,<2.0.0"
+textual = ">=3.5.0,<4.0.0"
+
+# This section is for development-only dependencies
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.12.1"
+pre-commit = "^4.2.0"
+
+# This section is required for building the package
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]

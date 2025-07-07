@@ -2,15 +2,16 @@
 
 Proposed project for developing a Telegram client for Linux terminal in Python.
 
-Potential Telegram API clients:
-1. https://github.com/pylakey/aiotdlib
-2. https://github.com/alexander-akhmetov/python-telegram
+Planned Telegram API client:
 
-Potential Terminal UI Framework:
-1. https://github.com/Textualize/textual
+* <https://github.com/pylakey/aiotdlib>
+
+Planned Terminal UI Framework:
+
+* <https://github.com/Textualize/textual>
 
 Current alternatives:  
-https://github.com/paul-nameless/tg/ - this project seems to have had some activity recently
+<https://github.com/paul-nameless/tg/> - this project seems to have had some activity recently
 
 ### 1. Proposed Project Layout
 
