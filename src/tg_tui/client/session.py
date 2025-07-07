@@ -84,15 +84,11 @@ class Session:
             return
 
         self.client = Client()
-
-        # Register the generic update handler from the event bus
-        self.client.add_handler(self.event_bus.handle_update)
-
-        # Register the specific handler for authorization state updates
-        self.client.add_handler(
+        self.client.add_event_handler(
             self._handle_authorization_state,
-            update_type=API.Types.UPDATE_AUTHORIZATION_STATE,
+            API.Types.UPDATE_AUTHORIZATION_STATE,
         )
+        self.client.add_event_handler(self.event_bus.handle_update, None)
 
         # Start the client. This will begin the authorization flow.
         await self.client.start()
